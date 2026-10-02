@@ -2,48 +2,485 @@
 <html>
 
 <head>
-    <title>Something I Want You To Know ❤️</title>
+
+    <title>Things I Notice About You 💗</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+
+            margin: 0;
+
+            min-height: 100vh;
+
+            background:
+                radial-gradient(circle at 15% 15%, #fffafa, transparent 30%),
+                radial-gradient(circle at 85% 85%, #ffe1e9, transparent 35%),
+                linear-gradient(135deg, #fff3f5, #ffe4eb, #fff7f8);
+
+            font-family: 'Poppins', sans-serif;
+
+            color: #674550;
+
+            overflow-x: hidden;
+
+        }
+
+
+        .container {
+
+            width: 90%;
+
+            max-width: 800px;
+
+            margin: auto;
+
+            padding: 70px 0;
+
+            text-align: center;
+
+        }
+
+
+        /* Heading */
+
+        .envelope {
+
+            font-size: 45px;
+
+            animation: float 3s ease-in-out infinite;
+
+        }
+
+
+        h1 {
+
+            font-family: 'Caveat', cursive;
+
+            font-size: 65px;
+
+            color: #b85c78;
+
+            margin: 10px 0;
+
+        }
+
+
+        .intro {
+
+            max-width: 600px;
+
+            margin: 20px auto 50px;
+
+            line-height: 2;
+
+            font-size: 17px;
+
+        }
+
+
+        /* Memory cards */
+
+        .card {
+
+            background: rgba(255,255,255,0.72);
+
+            border-radius: 25px;
+
+            padding: 30px;
+
+            margin: 25px auto;
+
+            max-width: 650px;
+
+            box-shadow:
+                0 12px 35px rgba(180,90,110,0.12);
+
+            border: 1px solid rgba(255,255,255,0.9);
+
+            opacity: 0;
+
+            transform: translateY(30px);
+
+            animation: cardAppear 1s forwards;
+
+        }
+
+
+        .card:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        .card:nth-child(4) {
+            animation-delay: 1.5s;
+        }
+
+
+        .emoji {
+
+            font-size: 35px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        h2 {
+
+            font-family: 'Caveat', cursive;
+
+            font-size: 38px;
+
+            color: #bd637d;
+
+            margin: 5px;
+
+        }
+
+
+        .card p {
+
+            line-height: 1.9;
+
+            font-size: 16px;
+
+        }
+
+
+        /* Highlight */
+
+        .highlight {
+
+            font-family: 'Caveat', cursive;
+
+            font-size: 34px;
+
+            color: #ae5873;
+
+            margin: 45px 0;
+
+        }
+
+
+        /* Button */
+
+        button {
+
+            border: none;
+
+            padding: 15px 32px;
+
+            border-radius: 30px;
+
+            background: #d47d96;
+
+            color: white;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+            box-shadow: 0 8px 20px rgba(180,90,110,0.2);
+
+        }
+
+
+        button:hover {
+
+            transform: scale(1.08);
+
+        }
+
+
+        /* Floating flowers */
+
+        .flower {
+
+            position: fixed;
+
+            bottom: -40px;
+
+            font-size: 25px;
+
+            animation: flowerFloat 8s linear infinite;
+
+            opacity: 0;
+
+            pointer-events: none;
+
+        }
+
+
+        @keyframes cardAppear {
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+
+        @keyframes float {
+
+            0%,100% {
+
+                transform: translateY(0);
+
+            }
+
+            50% {
+
+                transform: translateY(-8px);
+
+            }
+
+        }
+
+
+        @keyframes flowerFloat {
+
+            0% {
+
+                transform: translateY(0) rotate(0deg);
+
+                opacity: 0;
+
+            }
+
+            15% {
+
+                opacity: 0.8;
+
+            }
+
+            100% {
+
+                transform: translateY(-115vh) rotate(180deg);
+
+                opacity: 0;
+
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <h1>There is something I want you to know...</h1>
 
-    <p>
-        After all the efforts, the difficult days,
-        the misunderstandings, the laughter,
-        and all the little moments we've shared...
-    </p>
+    <!-- Floating flowers -->
 
-    <p>
-        I just want you to know that you are
-        genuinely special to me.
-    </p>
+    <div class="flower" style="left:5%; animation-delay:0s;">🌸</div>
 
-    <p>
-        I notice the things you do.
-        I notice the effort you make.
-        And even if I don't always say it properly,
-        they mean a lot to me.
-    </p>
+    <div class="flower" style="left:18%; animation-delay:2s;">🌷</div>
 
-    <p>
-        Thank you for being there,
-        for trying,
-        and for choosing us even on the difficult days.
-    </p>
+    <div class="flower" style="left:35%; animation-delay:4s;">🌼</div>
 
-    <h2>And this little website?</h2>
+    <div class="flower" style="left:55%; animation-delay:1s;">🌸</div>
 
-    <p>
-        It's just my small way of saying...
-    </p>
+    <div class="flower" style="left:75%; animation-delay:3s;">🌷</div>
 
-    <h1>You matter to me. ❤️</h1>
+    <div class="flower" style="left:90%; animation-delay:5s;">🌼</div>
 
-    <button onclick="location.href='memories.html'">
-        One more thing... →
-    </button>
+
+    <div class="container">
+
+
+        <div class="envelope">
+            💌
+        </div>
+
+
+        <h1>
+            Things I don't always say...
+        </h1>
+
+
+        <p class="intro">
+
+            Maybe I don't always notice in the moment.
+
+            <br>
+
+            Maybe sometimes I'm too caught up in
+            everything else going on.
+
+            <br><br>
+
+            But when I stop and think about us,
+            there are so many little things about you
+            that I really appreciate.
+
+        </p>
+
+
+        <!-- CARD 1 -->
+
+        <div class="card">
+
+            <div class="emoji">
+                🫶
+            </div>
+
+            <h2>
+                I notice your effort.
+            </h2>
+
+            <p>
+
+                I know things haven't always been easy.
+
+                We've had arguments, misunderstandings,
+                and days when neither of us really knew
+                what to say.
+
+                <br><br>
+
+                But I notice that you still try.
+
+                And maybe I don't say it enough,
+                but that means something to me.
+
+            </p>
+
+        </div>
+
+
+        <!-- CARD 2 -->
+
+        <div class="card">
+
+            <div class="emoji">
+                🌷
+            </div>
+
+            <h2>
+                I notice the little things.
+            </h2>
+
+            <p>
+
+                The small things you probably don't even
+                think twice about.
+
+                <br><br>
+
+                The random messages.
+
+                The checking in.
+
+                The conversations that start with
+                something completely stupid and somehow
+                become the best part of my day.
+
+            </p>
+
+        </div>
+
+
+        <!-- CARD 3 -->
+
+        <div class="card">
+
+            <div class="emoji">
+                🌙
+            </div>
+
+            <h2>
+                I remember the difficult days too.
+            </h2>
+
+            <p>
+
+                I don't want this little website to pretend
+                that everything has always been perfect.
+
+                <br><br>
+
+                It hasn't.
+
+                We've hurt each other.
+                We've misunderstood each other.
+                We've had moments where things felt heavy.
+
+                <br><br>
+
+                But those moments are also part of our story.
+
+            </p>
+
+        </div>
+
+
+        <!-- CARD 4 -->
+
+        <div class="card">
+
+            <div class="emoji">
+                💗
+            </div>
+
+            <h2>
+                And somehow...
+            </h2>
+
+            <p>
+
+                After all of that,
+
+                I still look at everything we've shared
+                and feel grateful that it happened.
+
+                <br><br>
+
+                Because underneath all the arguments,
+                there are also so many moments
+                that I wouldn't trade.
+
+            </p>
+
+        </div>
+
+
+        <p class="highlight">
+
+            Your efforts are seen.  
+            Even when I forget to say it. 💗
+
+        </p>
+
+
+        <button onclick="location.href='memories.html'">
+
+            Keep reading... 🌷
+
+        </button>
+
+
+    </div>
+
 
 </body>
 
