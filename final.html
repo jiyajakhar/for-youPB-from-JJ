@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>For You ❤️</title>
+    <title>PB & JJ 🌅</title>
 
+    <!-- Beautiful Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
 
@@ -19,277 +20,406 @@
         body {
             margin: 0;
             min-height: 100vh;
-            background:
-                radial-gradient(circle at top, #fff1f6, transparent 45%),
-                linear-gradient(135deg, #f8dce8, #fcecf3, #ead9ed);
-
             font-family: 'Poppins', sans-serif;
-            color: #593d4b;
-            overflow: hidden;
-        }
 
-        .container {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 25px;
-        }
+            background:
+                radial-gradient(circle at 20% 20%, #ffd6a5 0%, transparent 30%),
+                radial-gradient(circle at 80% 25%, #ffb4a2 0%, transparent 35%),
+                radial-gradient(circle at 50% 80%, #f9c5d1 0%, transparent 35%),
+                linear-gradient(135deg, #ffecd2, #fcb69f, #f8a5a5, #cdb4db);
 
-        .content {
-            max-width: 750px;
-            animation: appear 2s ease;
-        }
-
-        .small {
-            font-size: 16px;
-            letter-spacing: 2px;
-            opacity: 0.7;
-        }
-
-        h1 {
-            font-family: 'Caveat', cursive;
-            font-size: 75px;
-            margin: 10px 0;
-            color: #9b4d6d;
-            text-shadow: 0 0 20px rgba(180, 90, 130, 0.2);
-        }
-
-        .message {
-            font-size: 18px;
-            line-height: 2;
-            margin-top: 25px;
-        }
-
-        .hidden-message {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: 1.5s ease;
-        }
-
-        .show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        button {
-            margin-top: 35px;
-            padding: 15px 32px;
-            border: none;
-            border-radius: 40px;
-            background: #c8668d;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            box-shadow: 0 8px 25px rgba(150, 70, 100, 0.25);
-            transition: 0.3s;
-        }
-
-        button:hover {
-            transform: scale(1.08);
-        }
-
-        .final {
-            display: none;
-            margin-top: 30px;
-        }
-
-        .final h2 {
-            font-family: 'Caveat', cursive;
-            font-size: 55px;
-            color: #a7476d;
-            animation: heartbeat 1.5s infinite;
+            color: #56343b;
+            overflow-x: hidden;
         }
 
         /* Floating hearts */
 
         .heart {
             position: fixed;
-            bottom: -30px;
-            font-size: 25px;
-            pointer-events: none;
+            font-size: 22px;
             animation: float 7s linear infinite;
-            opacity: 0;
+            opacity: 0.65;
+            pointer-events: none;
         }
 
+        .h1 { left: 8%; animation-delay: 0s; }
+        .h2 { left: 25%; animation-delay: 2s; }
+        .h3 { left: 48%; animation-delay: 4s; }
+        .h4 { left: 72%; animation-delay: 1s; }
+        .h5 { left: 90%; animation-delay: 3s; }
+
         @keyframes float {
-
             0% {
-                transform: translateY(0) rotate(0deg);
-                opacity: 0;
-            }
-
-            15% {
-                opacity: 0.8;
+                bottom: -50px;
+                transform: rotate(0deg);
             }
 
             100% {
-                transform: translateY(-110vh) rotate(360deg);
-                opacity: 0;
+                bottom: 110%;
+                transform: rotate(30deg);
             }
-
         }
 
-        @keyframes appear {
+        /* Main container */
 
+        .container {
+            width: 90%;
+            max-width: 950px;
+            margin: auto;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .little {
+            font-size: 15px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: 0.75;
+        }
+
+        h1 {
+            font-family: 'Caveat', cursive;
+            font-size: 64px;
+            margin: 5px 0 0;
+            color: #7a3e48;
+        }
+
+        .names {
+            font-family: 'Caveat', cursive;
+            font-size: 32px;
+            margin: 5px 0 20px;
+            color: #9a5360;
+        }
+
+        .intro {
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.9;
+            font-size: 15px;
+        }
+
+        /* Sunset divider */
+
+        .sunset {
+            font-size: 45px;
+            margin: 25px 0;
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-7px);
+            }
+        }
+
+        /* Scrapbook cards */
+
+        .scrapbook {
+            margin-top: 45px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .note {
+            background: rgba(255, 250, 245, 0.82);
+            padding: 28px 22px;
+            border-radius: 8px;
+
+            box-shadow:
+                0 12px 25px rgba(110, 58, 70, 0.15);
+
+            position: relative;
+
+            animation: pop 0.8s ease forwards;
+            transition: 0.3s;
+        }
+
+        .note:hover {
+            transform: translateY(-8px) rotate(1deg);
+        }
+
+        .note:nth-child(odd) {
+            transform: rotate(-2deg);
+        }
+
+        .note:nth-child(even) {
+            transform: rotate(2deg);
+        }
+
+        .note::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 35%;
+            width: 80px;
+            height: 22px;
+            background: rgba(255, 190, 150, 0.65);
+            transform: rotate(-3deg);
+        }
+
+        .note h2 {
+            font-family: 'Caveat', cursive;
+            font-size: 31px;
+            margin: 10px 0;
+            color: #8a4653;
+        }
+
+        .note p {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        @keyframes pop {
             from {
                 opacity: 0;
-                transform: scale(0.9);
+                transform: scale(0.8);
             }
 
             to {
                 opacity: 1;
-                transform: scale(1);
             }
-
         }
 
-        @keyframes heartbeat {
+        /* Thankful note */
 
-            0%, 100% {
-                transform: scale(1);
-            }
+        .thankful {
+            margin: 55px auto 30px;
+            max-width: 700px;
 
-            50% {
-                transform: scale(1.08);
-            }
+            background: rgba(255, 245, 238, 0.8);
+            padding: 35px 30px;
+            border-radius: 20px;
 
+            box-shadow: 0 15px 35px rgba(100, 50, 60, 0.15);
+        }
+
+        .thankful h2 {
+            font-family: 'Caveat', cursive;
+            font-size: 40px;
+            color: #854653;
+            margin-top: 0;
+        }
+
+        .thankful p {
+            line-height: 2;
+            font-size: 15px;
+        }
+
+        /* Complete each other */
+
+        .complete {
+            margin: 40px auto;
+            padding: 30px;
+
+            font-family: 'Caveat', cursive;
+            font-size: 34px;
+            color: #7d3f4a;
+        }
+
+        .initials {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        /* Button */
+
+        .button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 14px 28px;
+
+            background: #9b5360;
+            color: white;
+
+            text-decoration: none;
+            border-radius: 30px;
+
+            font-size: 14px;
+
+            box-shadow: 0 8px 18px rgba(120, 50, 60, 0.2);
+
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: scale(1.06);
+            background: #7d3f4a;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-family: 'Caveat', cursive;
+            font-size: 25px;
         }
 
     </style>
-
 </head>
-
 
 <body>
 
-
     <!-- Floating hearts -->
 
-    <div class="heart" style="left:5%; animation-delay:0s;">❤️</div>
-    <div class="heart" style="left:15%; animation-delay:2s;">💗</div>
-    <div class="heart" style="left:30%; animation-delay:4s;">💕</div>
-    <div class="heart" style="left:50%; animation-delay:1s;">🤍</div>
-    <div class="heart" style="left:70%; animation-delay:3s;">❤️</div>
-    <div class="heart" style="left:90%; animation-delay:5s;">💗</div>
+    <div class="heart h1">♡</div>
+    <div class="heart h2">♥</div>
+    <div class="heart h3">♡</div>
+    <div class="heart h4">♥</div>
+    <div class="heart h5">♡</div>
 
 
     <div class="container">
 
-        <div class="content">
+        <div class="little">A little piece of us</div>
 
-            <p class="small">
-                AND FINALLY...
-            </p>
+        <h1>PB & JJ 🌅</h1>
+
+        <div class="names">
+            two people, one little story
+        </div>
+
+        <div class="sunset">
+            🌅
+        </div>
+
+        <p class="intro">
+            I don't know exactly what the future will look like.
+            But when I imagine the little moments I want in it,
+            somehow you're there in so many of them.
+            <br><br>
+            And maybe that's enough for me.
+            Just knowing that there are still so many moments
+            left for <b>PB & JJ</b> to experience together. ♡
+        </p>
 
 
-            <h1>You are special to me. ❤️</h1>
+        <!-- Little things -->
 
+        <div class="scrapbook">
 
-            <div class="message">
-
+            <div class="note">
+                <h2>🌅 Sunsets</h2>
                 <p>
-                    I don't know if I always know how to put
-                    everything I feel into words.
+                    I want to see every sunset with you.
+                    Even the ordinary ones that nobody else would stop to notice.
+                    I think they'd feel different if you were beside me.
                 </p>
-
-                <p>
-                    But after all the conversations,
-                    all the efforts, all the difficult days,
-                    and all the moments that made us smile...
-                </p>
-
-                <p>
-                    I wanted you to have a little reminder
-                    that there is someone who notices,
-                    remembers, and cares.
-                </p>
-
             </div>
 
-
-            <div class="hidden-message" id="hiddenMessage">
-
+            <div class="note">
+                <h2>☕ Slow days</h2>
                 <p>
-                    Thank you for trying.
-                    Thank you for staying.
-                    Thank you for being you.
+                    I want those days where we don't have anything important to do.
+                    Just sitting together, talking, laughing,
+                    and enjoying the fact that we're together.
                 </p>
-
-                <div class="final" id="finalMessage">
-
-                    <h2>
-                        You mean a lot to me. ❤️
-                    </h2>
-
-                    <p>
-                        And I hope you never forget that.
-                    </p>
-
-                </div>
-
             </div>
 
+            <div class="note">
+                <h2>😂 Stupid laughter</h2>
+                <p>
+                    I want more of those moments where something completely stupid
+                    makes us laugh way more than it should.
+                </p>
+            </div>
 
-            <button onclick="revealMessage()">
-                One last thing... 💌
-            </button>
+            <div class="note">
+                <h2>🌧️ Rainy evenings</h2>
+                <p>
+                    A cozy place, rain outside,
+                    random conversations,
+                    and probably us talking about things
+                    that make absolutely no sense.
+                </p>
+            </div>
 
+            <div class="note">
+                <h2>🚶‍♀️ Random walks</h2>
+                <p>
+                    Walking somewhere without a proper plan
+                    and somehow turning a completely normal day
+                    into one we'll remember.
+                </p>
+            </div>
+
+            <div class="note">
+                <h2>💌 More us</h2>
+                <p>
+                    More conversations.
+                    More understanding.
+                    More growing together.
+                    More ordinary days that quietly become special.
+                </p>
+            </div>
 
         </div>
 
+
+        <!-- Thankful section -->
+
+        <div class="thankful">
+
+            <h2>♡ A little thank-you ♡</h2>
+
+            <p>
+                I'm genuinely thankful for you.
+                <br><br>
+
+                Thankful for the good days,
+                for the silly conversations,
+                for the memories we've already made,
+                and even for the difficult days that taught us
+                how to understand each other a little better.
+                <br><br>
+
+                I know we're not perfect.
+                We have our arguments, misunderstandings,
+                and moments when things aren't easy.
+                But I'm thankful that underneath all of that,
+                there is still something that makes me want
+                to choose you, understand you, and keep growing with you.
+                <br><br>
+
+                Thank you for being a part of my life,
+                PB. ❤️
+            </p>
+
+        </div>
+
+
+        <!-- Complete each other -->
+
+        <div class="complete">
+
+            <div class="initials">
+                PB ♡ JJ
+            </div>
+
+            Maybe we don't complete each other
+            because we're incomplete alone...
+
+            <br>
+
+            Maybe we complete each other
+            because we bring out little pieces
+            in one another that make life feel more like us. 🌅
+
+        </div>
+
+
+        <div class="footer">
+            More sunsets. More memories. More us. ♡
+        </div>
+
+
+        <a href="final.html" class="button">
+            One last page... 💌
+        </a>
+
     </div>
 
-
-    <script>
-
-        function revealMessage() {
-
-            document.getElementById("hiddenMessage").classList.add("show");
-
-            setTimeout(function() {
-
-                document.getElementById("finalMessage").style.display = "block";
-
-                createHearts();
-
-            }, 1200);
-
-        }
-
-
-        function createHearts() {
-
-            for (let i = 0; i < 25; i++) {
-
-                let heart = document.createElement("div");
-
-                heart.innerHTML = "❤️";
-
-                heart.style.position = "fixed";
-
-                heart.style.left = Math.random() * 100 + "vw";
-
-                heart.style.top = Math.random() * 100 + "vh";
-
-                heart.style.fontSize =
-                    (15 + Math.random() * 25) + "px";
-
-                heart.style.pointerEvents = "none";
-
-                heart.style.animation =
-                    "heartbeat 1s infinite";
-
-                document.body.appendChild(heart);
-
-            }
-
-        }
-
-    </script>
-
-
 </body>
-
 </html>
