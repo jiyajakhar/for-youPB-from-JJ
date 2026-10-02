@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>For You ❤️</title>
+
+    <!-- Beautiful romantic fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #fff0f5, #ffe4ec, #fce1ef);
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            color: #5c3a46;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: auto;
+            padding: 70px 25px;
+        }
+
+        h1 {
+            font-family: 'Caveat', cursive;
+            font-size: 60px;
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease;
+        }
+
+        h2 {
+            font-family: 'Caveat', cursive;
+            font-size: 38px;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.9;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.75);
+            padding: 30px;
+            margin: 25px 0;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(120, 70, 90, 0.15);
+            animation: popUp 1s ease;
+        }
+
+        button {
+            border: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            background: #d86b91;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+        }
+
+        /* Floating hearts */
+
+        .heart {
+            position: fixed;
+            bottom: -20px;
+            font-size: 22px;
+            animation: floatUp 6s linear infinite;
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        @keyframes floatUp {
+
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+
+        }
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        @keyframes popUp {
+
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Floating hearts -->
+
+    <div class="heart" style="left:10%; animation-delay:0s;">❤️</div>
+
+    <div class="heart" style="left:25%; animation-delay:2s;">💗</div>
+
+    <div class="heart" style="left:45%; animation-delay:4s;">🤍</div>
+
+    <div class="heart" style="left:65%; animation-delay:1s;">💕</div>
+
+    <div class="heart" style="left:85%; animation-delay:3s;">❤️</div>
+
+
+    <div class="container">
+
+        <h1>Some things I notice... ❤️</h1>
+
+        <p>
+            Maybe I don't always say these things,
+            but I notice them.
+        </p>
+
+
+        <div class="card">
+
+            <h2>Your efforts</h2>
+
+            <p>
+                I know relationships aren't always easy.
+                We've had our difficult days,
+                our arguments, our misunderstandings
+                and moments when things felt heavy.
+            </p>
+
+            <p>
+                But behind all of that,
+                I have also seen you trying.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>The difficult days</h2>
+
+            <p>
+                We've had days where we didn't understand
+                each other properly.
+            </p>
+
+            <p>
+                Days where a small thing became a big fight.
+                Days where both of us were tired,
+                hurt or frustrated.
+            </p>
+
+            <p>
+                But somehow, we kept coming back
+                and trying to understand each other again.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>And the little things...</h2>
+
+            <p>
+                The random conversations.
+                The silly moments.
+                The laughter.
+                The comfort.
+                The feeling of having someone
+                who knows you a little more than everyone else.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>So...</h2>
+
+            <p>
+                After everything,
+                I just wanted to make something
+                that reminds you that
+            </p>
+
+            <h1>your efforts are seen. ❤️</h1>
+
+        </div>
+
+
+        <button onclick="location.href='final.html'">
+            There's one last thing... 💌
+        </button>
+
+    </div>
+
+
+</body>
+
+</html>
