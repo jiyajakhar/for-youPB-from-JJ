@@ -2,30 +2,419 @@
 <html>
 
 <head>
-    <title>For You ❤️</title>
+
+    <title>A Little Letter 💌</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            background:
+                radial-gradient(circle at 10% 10%, #fff7f8, transparent 30%),
+                radial-gradient(circle at 90% 90%, #ffe1e8, transparent 35%),
+                linear-gradient(135deg, #fff1f4, #ffe5eb, #fff5f6);
+
+            font-family: 'Poppins', sans-serif;
+            color: #69454f;
+
+            overflow-x: hidden;
+        }
+
+
+        /* Main letter */
+
+        .letter {
+            width: 90%;
+            max-width: 700px;
+
+            margin: 70px auto;
+
+            padding: 55px 45px;
+
+            background: rgba(255, 255, 255, 0.72);
+
+            border-radius: 30px;
+
+            box-shadow:
+                0 20px 50px rgba(180, 100, 120, 0.15);
+
+            border: 1px solid rgba(255,255,255,0.8);
+
+            text-align: center;
+
+            animation: letterAppear 1.5s ease;
+        }
+
+
+        /* Letter emoji */
+
+        .envelope {
+            font-size: 48px;
+
+            animation: floating 3s ease-in-out infinite;
+        }
+
+
+        h1 {
+            font-family: 'Caveat', cursive;
+
+            font-size: 65px;
+
+            color: #b85f78;
+
+            margin: 10px 0 25px;
+        }
+
+
+        p {
+            font-size: 17px;
+
+            line-height: 2;
+
+            margin: 22px 0;
+        }
+
+
+        .highlight {
+
+            font-family: 'Caveat', cursive;
+
+            font-size: 35px;
+
+            color: #bd637d;
+
+            margin: 35px 0;
+
+        }
+
+
+        /* Button */
+
+        button {
+
+            margin-top: 25px;
+
+            padding: 14px 30px;
+
+            border: none;
+
+            border-radius: 30px;
+
+            background: #d9829b;
+
+            color: white;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+            box-shadow: 0 8px 20px rgba(180,90,110,0.2);
+
+        }
+
+
+        button:hover {
+
+            transform: scale(1.08);
+
+        }
+
+
+        /* Flowers */
+
+        .flower {
+
+            position: fixed;
+
+            font-size: 28px;
+
+            bottom: -40px;
+
+            pointer-events: none;
+
+            animation: flowerFloat 8s linear infinite;
+
+            opacity: 0;
+
+        }
+
+
+        /* Little stationary flowers */
+
+        .corner {
+
+            position: fixed;
+
+            font-size: 35px;
+
+            opacity: 0.7;
+
+            animation: sway 3s ease-in-out infinite;
+
+        }
+
+
+        /* Animations */
+
+        @keyframes letterAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(40px) scale(0.95);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0) scale(1);
+
+            }
+
+        }
+
+
+        @keyframes floating {
+
+            0%, 100% {
+
+                transform: translateY(0);
+
+            }
+
+            50% {
+
+                transform: translateY(-8px);
+
+            }
+
+        }
+
+
+        @keyframes flowerFloat {
+
+            0% {
+
+                transform: translateY(0) rotate(0deg);
+
+                opacity: 0;
+
+            }
+
+            15% {
+
+                opacity: 0.8;
+
+            }
+
+            100% {
+
+                transform: translateY(-115vh) rotate(180deg);
+
+                opacity: 0;
+
+            }
+
+        }
+
+
+        @keyframes sway {
+
+            0%, 100% {
+
+                transform: rotate(-5deg);
+
+            }
+
+            50% {
+
+                transform: rotate(5deg);
+
+            }
+
+        }
+
+
+        @media(max-width:600px) {
+
+            .letter {
+
+                padding: 40px 25px;
+
+            }
+
+            h1 {
+
+                font-size: 52px;
+
+            }
+
+            p {
+
+                font-size: 15px;
+
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <h1>Hey PB ❤️</h1>
 
-    <h2>You are really special to me.</h2>
+    <!-- Corner flowers -->
 
-    <p>
-        After everything we've been through,
-        all the efforts, the difficult days,
-        the little moments and everything in between...
-    </p>
+    <div class="corner" style="top:5%; left:5%;">
+        🌷
+    </div>
 
-    <p>
-        I just wanted to make this for you because you deserve  all the special efforts , I love to make you shy in every manner,if you did get it ,you get it,always will love you baby.
-    </p>
+    <div class="corner" style="top:12%; right:6%;">
+        🌸
+    </div>
 
-    <h2>There is more...</h2>
+    <div class="corner" style="bottom:8%; left:6%;">
+        🌼
+    </div>
 
-    <button onclick="location.href='message.html'">
-        Keep going ❤️
-    </button>
+    <div class="corner" style="bottom:12%; right:5%;">
+        🌷
+    </div>
+
+
+    <!-- Floating flowers -->
+
+    <div class="flower" style="left:8%; animation-delay:0s;">🌸</div>
+
+    <div class="flower" style="left:20%; animation-delay:2s;">🌷</div>
+
+    <div class="flower" style="left:38%; animation-delay:4s;">🌼</div>
+
+    <div class="flower" style="left:60%; animation-delay:1s;">🌸</div>
+
+    <div class="flower" style="left:78%; animation-delay:3s;">🌷</div>
+
+    <div class="flower" style="left:92%; animation-delay:5s;">🌼</div>
+
+
+    <!-- Letter -->
+
+    <div class="letter">
+
+        <div class="envelope">
+            💌
+        </div>
+
+
+        <h1>
+            A little thought...
+        </h1>
+
+
+        <p>
+
+            You know, I don't think love is only about
+            the big things.
+
+        </p>
+
+
+        <p>
+
+            Sometimes I think it's about the really
+            ordinary things that we secretly wish
+            we could keep forever.
+
+        </p>
+
+
+        <p class="highlight">
+
+            I want to see every sunset with you. 🌅
+            
+        </p>
+
+
+        <p>
+
+            I want to have those random conversations
+            that somehow turn into hours.
+
+        </p>
+
+
+        <p>
+
+            I want to laugh with you over things that
+            probably wouldn't make sense to anyone else.
+
+        </p>
+
+
+        <p>
+
+            I want to sit beside you on a completely
+            ordinary day and still think,
+            <br>
+
+            <strong>
+                "I'm glad you're here." 💗
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            Maybe that's what I want most...
+
+            <br>
+
+            Not a perfect story.
+
+            <br>
+
+            Just more little moments with you.
+
+        </p>
+
+
+        <p class="highlight">
+
+            More sunsets.  
+            More silly conversations.  
+            More us. 💌
+
+        </p>
+
+
+        <button onclick="location.href='message.html'">
+
+            There's more I want to tell you... 💗
+
+        </button>
+
+
+    </div>
+
 
 </body>
 
