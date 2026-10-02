@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>For You ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at top, #fff1f6, transparent 45%),
+                linear-gradient(135deg, #f8dce8, #fcecf3, #ead9ed);
+
+            font-family: 'Poppins', sans-serif;
+            color: #593d4b;
+            overflow: hidden;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .content {
+            max-width: 750px;
+            animation: appear 2s ease;
+        }
+
+        .small {
+            font-size: 16px;
+            letter-spacing: 2px;
+            opacity: 0.7;
+        }
+
+        h1 {
+            font-family: 'Caveat', cursive;
+            font-size: 75px;
+            margin: 10px 0;
+            color: #9b4d6d;
+            text-shadow: 0 0 20px rgba(180, 90, 130, 0.2);
+        }
+
+        .message {
+            font-size: 18px;
+            line-height: 2;
+            margin-top: 25px;
+        }
+
+        .hidden-message {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 1.5s ease;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        button {
+            margin-top: 35px;
+            padding: 15px 32px;
+            border: none;
+            border-radius: 40px;
+            background: #c8668d;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(150, 70, 100, 0.25);
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+        }
+
+        .final {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .final h2 {
+            font-family: 'Caveat', cursive;
+            font-size: 55px;
+            color: #a7476d;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        /* Floating hearts */
+
+        .heart {
+            position: fixed;
+            bottom: -30px;
+            font-size: 25px;
+            pointer-events: none;
+            animation: float 7s linear infinite;
+            opacity: 0;
+        }
+
+        @keyframes float {
+
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+
+        }
+
+        @keyframes appear {
+
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+        }
+
+        @keyframes heartbeat {
+
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.08);
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Floating hearts -->
+
+    <div class="heart" style="left:5%; animation-delay:0s;">❤️</div>
+    <div class="heart" style="left:15%; animation-delay:2s;">💗</div>
+    <div class="heart" style="left:30%; animation-delay:4s;">💕</div>
+    <div class="heart" style="left:50%; animation-delay:1s;">🤍</div>
+    <div class="heart" style="left:70%; animation-delay:3s;">❤️</div>
+    <div class="heart" style="left:90%; animation-delay:5s;">💗</div>
+
+
+    <div class="container">
+
+        <div class="content">
+
+            <p class="small">
+                AND FINALLY...
+            </p>
+
+
+            <h1>You are special to me. ❤️</h1>
+
+
+            <div class="message">
+
+                <p>
+                    I don't know if I always know how to put
+                    everything I feel into words.
+                </p>
+
+                <p>
+                    But after all the conversations,
+                    all the efforts, all the difficult days,
+                    and all the moments that made us smile...
+                </p>
+
+                <p>
+                    I wanted you to have a little reminder
+                    that there is someone who notices,
+                    remembers, and cares.
+                </p>
+
+            </div>
+
+
+            <div class="hidden-message" id="hiddenMessage">
+
+                <p>
+                    Thank you for trying.
+                    Thank you for staying.
+                    Thank you for being you.
+                </p>
+
+                <div class="final" id="finalMessage">
+
+                    <h2>
+                        You mean a lot to me. ❤️
+                    </h2>
+
+                    <p>
+                        And I hope you never forget that.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button onclick="revealMessage()">
+                One last thing... 💌
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function revealMessage() {
+
+            document.getElementById("hiddenMessage").classList.add("show");
+
+            setTimeout(function() {
+
+                document.getElementById("finalMessage").style.display = "block";
+
+                createHearts();
+
+            }, 1200);
+
+        }
+
+
+        function createHearts() {
+
+            for (let i = 0; i < 25; i++) {
+
+                let heart = document.createElement("div");
+
+                heart.innerHTML = "❤️";
+
+                heart.style.position = "fixed";
+
+                heart.style.left = Math.random() * 100 + "vw";
+
+                heart.style.top = Math.random() * 100 + "vh";
+
+                heart.style.fontSize =
+                    (15 + Math.random() * 25) + "px";
+
+                heart.style.pointerEvents = "none";
+
+                heart.style.animation =
+                    "heartbeat 1s infinite";
+
+                document.body.appendChild(heart);
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
