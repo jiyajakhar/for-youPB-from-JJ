@@ -1,425 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-    <title>PB & JJ 🌅</title>
+<title>PB × JJ — One More Thing 💙</title>
 
-    <!-- Beautiful Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Serif+Display:ital@0;1&family=Kalam:wght@400;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <style>
+<style>
+*{box-sizing:border-box}
 
-        * {
-            box-sizing: border-box;
-        }
+body{
+margin:0;
+min-height:100vh;
+overflow:hidden;
+font-family:Montserrat,sans-serif;
+color:white;
 
-        body {
-            margin: 0;
-            min-height: 100vh;
-            font-family: 'Poppins', sans-serif;
+background:
+radial-gradient(circle at 50% 25%,#486fa9 0,transparent 25%),
+radial-gradient(circle at 15% 80%,#243e79 0,transparent 30%),
+linear-gradient(160deg,#7eb9e8,#34558f,#172957,#080f29);
+}
 
-            background:
-                radial-gradient(circle at 20% 20%, #ffd6a5 0%, transparent 30%),
-                radial-gradient(circle at 80% 25%, #ffb4a2 0%, transparent 35%),
-                radial-gradient(circle at 50% 80%, #f9c5d1 0%, transparent 35%),
-                linear-gradient(135deg, #ffecd2, #fcb69f, #f8a5a5, #cdb4db);
+.star{
+position:fixed;
+font-size:13px;
+opacity:.7;
+animation:twinkle 2s infinite alternate;
+}
 
-            color: #56343b;
-            overflow-x: hidden;
-        }
+.s1{top:12%;left:15%}
+.s2{top:20%;right:20%;animation-delay:.4s}
+.s3{top:60%;left:8%;animation-delay:1s}
+.s4{top:70%;right:12%;animation-delay:1.5s}
+.s5{top:35%;left:80%;animation-delay:.8s}
 
-        /* Floating hearts */
+@keyframes twinkle{
+from{opacity:.25;transform:scale(.8)}
+to{opacity:1;transform:scale(1.3)}
+}
 
-        .heart {
-            position: fixed;
-            font-size: 22px;
-            animation: float 7s linear infinite;
-            opacity: 0.65;
-            pointer-events: none;
-        }
+.wrapper{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:20px;
+text-align:center;
+}
 
-        .h1 { left: 8%; animation-delay: 0s; }
-        .h2 { left: 25%; animation-delay: 2s; }
-        .h3 { left: 48%; animation-delay: 4s; }
-        .h4 { left: 72%; animation-delay: 1s; }
-        .h5 { left: 90%; animation-delay: 3s; }
+.card{
+max-width:760px;
+padding:45px 35px;
+border-radius:35px;
+background:rgba(255,255,255,.09);
+border:1px solid rgba(255,255,255,.2);
+backdrop-filter:blur(15px);
+box-shadow:0 30px 80px rgba(0,0,0,.3);
+}
 
-        @keyframes float {
-            0% {
-                bottom: -50px;
-                transform: rotate(0deg);
-            }
+h1{
+font-family:"DM Serif Display",serif;
+font-size:55px;
+font-weight:400;
+margin:0;
+}
 
-            100% {
-                bottom: 110%;
-                transform: rotate(30deg);
-            }
-        }
+.hand{
+font-size:45px;
+margin:15px;
+}
 
-        /* Main container */
+p{
+line-height:1.9;
+font-size:15px;
+}
 
-        .container {
-            width: 90%;
-            max-width: 950px;
-            margin: auto;
-            padding: 60px 0;
-            text-align: center;
-        }
+button{
+border:0;
+padding:15px 30px;
+border-radius:30px;
+background:#ccecff;
+color:#17395f;
+font-family:Kalam,cursive;
+font-size:20px;
+cursor:pointer;
+transition:.3s;
+}
 
-        .little {
-            font-size: 15px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            opacity: 0.75;
-        }
+button:hover{
+transform:scale(1.08);
+box-shadow:0 0 30px rgba(180,225,255,.5);
+}
 
-        h1 {
-            font-family: 'Caveat', cursive;
-            font-size: 64px;
-            margin: 5px 0 0;
-            color: #7a3e48;
-        }
+.hidden{
+display:none;
+animation:reveal 1s ease;
+}
 
-        .names {
-            font-family: 'Caveat', cursive;
-            font-size: 32px;
-            margin: 5px 0 20px;
-            color: #9a5360;
-        }
+@keyframes reveal{
+0%{opacity:0;transform:scale(.5) rotate(-3deg)}
+70%{transform:scale(1.05) rotate(1deg)}
+100%{opacity:1;transform:scale(1)}
+}
 
-        .intro {
-            max-width: 650px;
-            margin: auto;
-            line-height: 1.9;
-            font-size: 15px;
-        }
+.big{
+font-family:Caveat,cursive;
+font-size:35px;
+color:#d9f2ff;
+line-height:1.5;
+}
 
-        /* Sunset divider */
+.date{
+font-family:"DM Serif Display",serif;
+font-size:48px;
+color:#bce7ff;
+margin:15px;
+}
 
-        .sunset {
-            font-size: 45px;
-            margin: 25px 0;
-            animation: glow 3s ease-in-out infinite;
-        }
+.tease{
+font-family:Kalam,cursive;
+font-size:23px;
+}
 
-        @keyframes glow {
-            0%, 100% {
-                transform: translateY(0);
-            }
+.heart{
+font-size:55px;
+animation:beat 1.3s infinite;
+}
 
-            50% {
-                transform: translateY(-7px);
-            }
-        }
+@keyframes beat{
+50%{transform:scale(1.18)}
+}
 
-        /* Scrapbook cards */
-
-        .scrapbook {
-            margin-top: 45px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
-
-        .note {
-            background: rgba(255, 250, 245, 0.82);
-            padding: 28px 22px;
-            border-radius: 8px;
-
-            box-shadow:
-                0 12px 25px rgba(110, 58, 70, 0.15);
-
-            position: relative;
-
-            animation: pop 0.8s ease forwards;
-            transition: 0.3s;
-        }
-
-        .note:hover {
-            transform: translateY(-8px) rotate(1deg);
-        }
-
-        .note:nth-child(odd) {
-            transform: rotate(-2deg);
-        }
-
-        .note:nth-child(even) {
-            transform: rotate(2deg);
-        }
-
-        .note::before {
-            content: "";
-            position: absolute;
-            top: -10px;
-            left: 35%;
-            width: 80px;
-            height: 22px;
-            background: rgba(255, 190, 150, 0.65);
-            transform: rotate(-3deg);
-        }
-
-        .note h2 {
-            font-family: 'Caveat', cursive;
-            font-size: 31px;
-            margin: 10px 0;
-            color: #8a4653;
-        }
-
-        .note p {
-            font-size: 14px;
-            line-height: 1.8;
-        }
-
-        @keyframes pop {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* Thankful note */
-
-        .thankful {
-            margin: 55px auto 30px;
-            max-width: 700px;
-
-            background: rgba(255, 245, 238, 0.8);
-            padding: 35px 30px;
-            border-radius: 20px;
-
-            box-shadow: 0 15px 35px rgba(100, 50, 60, 0.15);
-        }
-
-        .thankful h2 {
-            font-family: 'Caveat', cursive;
-            font-size: 40px;
-            color: #854653;
-            margin-top: 0;
-        }
-
-        .thankful p {
-            line-height: 2;
-            font-size: 15px;
-        }
-
-        /* Complete each other */
-
-        .complete {
-            margin: 40px auto;
-            padding: 30px;
-
-            font-family: 'Caveat', cursive;
-            font-size: 34px;
-            color: #7d3f4a;
-        }
-
-        .initials {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-
-        /* Button */
-
-        .button {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 14px 28px;
-
-            background: #9b5360;
-            color: white;
-
-            text-decoration: none;
-            border-radius: 30px;
-
-            font-size: 14px;
-
-            box-shadow: 0 8px 18px rgba(120, 50, 60, 0.2);
-
-            transition: 0.3s;
-        }
-
-        .button:hover {
-            transform: scale(1.06);
-            background: #7d3f4a;
-        }
-
-        .footer {
-            margin-top: 30px;
-            font-family: 'Caveat', cursive;
-            font-size: 25px;
-        }
-
-    </style>
+.restart{
+display:inline-block;
+margin-top:20px;
+color:#bde6ff;
+text-decoration:none;
+font-family:Kalam,cursive;
+}
+</style>
 </head>
 
 <body>
 
-    <!-- Floating hearts -->
+<div class="star s1">✦</div>
+<div class="star s2">✧</div>
+<div class="star s3">✦</div>
+<div class="star s4">✧</div>
+<div class="star s5">✦</div>
 
-    <div class="heart h1">♡</div>
-    <div class="heart h2">♥</div>
-    <div class="heart h3">♡</div>
-    <div class="heart h4">♥</div>
-    <div class="heart h5">♡</div>
+<div class="wrapper">
 
+<div class="card">
 
-    <div class="container">
+<div class="hand">PB ♡ JJ</div>
 
-        <div class="little">A little piece of us</div>
+<h1>One last thing...</h1>
 
-        <h1>PB & JJ 🌅</h1>
+<p>
+Duggi,
+I don't know what the future will look like.
+</p>
 
-        <div class="names">
-            two people, one little story
-        </div>
+<p>
+But I know I don't want to erase our past.
+The good parts.
+The bad parts.
+The stupid fights.
+The beautiful days.
+The moments where we didn't understand each other.
+The moments where we somehow understood each other without saying anything.
+</p>
 
-        <div class="sunset">
-            🌅
-        </div>
+<button onclick="show('promise')">
+Click this, babe 💙
+</button>
 
-        <p class="intro">
-            I don't know exactly what the future will look like.
-            But when I imagine the little moments I want in it,
-            somehow you're there in so many of them.
-            <br><br>
-            And maybe that's enough for me.
-            Just knowing that there are still so many moments
-            left for <b>PB & JJ</b> to experience together. ♡
-        </p>
+<div id="promise" class="hidden">
 
+<p class="big">
 
-        <!-- Little things -->
+I want to give us another chance.
 
-        <div class="scrapbook">
+<br><br>
 
-            <div class="note">
-                <h2>🌅 Sunsets</h2>
-                <p>
-                    I want to see every sunset with you.
-                    Even the ordinary ones that nobody else would stop to notice.
-                    I think they'd feel different if you were beside me.
-                </p>
-            </div>
+Not because everything was perfect.
 
-            <div class="note">
-                <h2>☕ Slow days</h2>
-                <p>
-                    I want those days where we don't have anything important to do.
-                    Just sitting together, talking, laughing,
-                    and enjoying the fact that we're together.
-                </p>
-            </div>
+<br>
 
-            <div class="note">
-                <h2>😂 Stupid laughter</h2>
-                <p>
-                    I want more of those moments where something completely stupid
-                    makes us laugh way more than it should.
-                </p>
-            </div>
+But because I know there's something between us
+that has survived a lot.
 
-            <div class="note">
-                <h2>🌧️ Rainy evenings</h2>
-                <p>
-                    A cozy place, rain outside,
-                    random conversations,
-                    and probably us talking about things
-                    that make absolutely no sense.
-                </p>
-            </div>
+<br><br>
 
-            <div class="note">
-                <h2>🚶‍♀️ Random walks</h2>
-                <p>
-                    Walking somewhere without a proper plan
-                    and somehow turning a completely normal day
-                    into one we'll remember.
-                </p>
-            </div>
+I want to take better care of us.
+I want to listen better.
+I want to understand you better.
+I want to make more memories with you.
 
-            <div class="note">
-                <h2>💌 More us</h2>
-                <p>
-                    More conversations.
-                    More understanding.
-                    More growing together.
-                    More ordinary days that quietly become special.
-                </p>
-            </div>
+<br><br>
 
-        </div>
+The past can't be vanished...
+
+<br>
+
+<b>but maybe it can be replaced
+by so many beautiful new memories
+that one day we smile when we look back.</b>
+
+</p>
+
+<div class="heart">💙</div>
+
+<button onclick="show('complete')">
+One more click...
+</button>
+
+</div>
 
 
-        <!-- Thankful section -->
+<div id="complete" class="hidden">
 
-        <div class="thankful">
+<p class="big">
 
-            <h2>♡ A little thank-you ♡</h2>
+Maybe that's why I say
+we complete each other.
 
-            <p>
-                I'm genuinely thankful for you.
-                <br><br>
+<br><br>
 
-                Thankful for the good days,
-                for the silly conversations,
-                for the memories we've already made,
-                and even for the difficult days that taught us
-                how to understand each other a little better.
-                <br><br>
+Not because either of us is incomplete.
 
-                I know we're not perfect.
-                We have our arguments, misunderstandings,
-                and moments when things aren't easy.
-                But I'm thankful that underneath all of that,
-                there is still something that makes me want
-                to choose you, understand you, and keep growing with you.
-                <br><br>
+<br>
 
-                Thank you for being a part of my life,
-                PB. ❤️
-            </p>
+But because somehow,
+your patience balances my moods,
+your calm meets my chaos,
+and your presence makes difficult things
+feel a little less difficult.
 
-        </div>
+<br><br>
 
+You're my Duggi.
 
-        <!-- Complete each other -->
+<br>
 
-        <div class="complete">
+I'm your JJ.
 
-            <div class="initials">
-                PB ♡ JJ
-            </div>
+<br><br>
 
-            Maybe we don't complete each other
-            because we're incomplete alone...
+And after all these years...
 
-            <br>
+<br>
 
-            Maybe we complete each other
-            because we bring out little pieces
-            in one another that make life feel more like us. 🌅
+<b>I'm still choosing us.</b>
 
-        </div>
+</p>
+
+<button onclick="show('date')">
+Okay, NOW the important part 👀
+</button>
+
+</div>
 
 
-        <div class="footer">
-            More sunsets. More memories. More us. ♡
-        </div>
+<div id="date" class="hidden">
 
+<p class="tease">
 
-        <a href="final.html" class="button">
-            One last page... 💌
-        </a>
+Babe...
 
-    </div>
+<br><br>
+
+There is one tiny issue
+that I have been meaning to discuss with you.
+😌
+
+</p>
+
+<div class="date">
+MY DATE IS STILL PENDING. 👀
+</div>
+
+<p class="big">
+So...
+
+<br><br>
+
+<b>WHEN ARE YOU TAKING ME, DUGGI? 😂💙</b>
+</p>
+
+<p class="tease">
+I've been waiting patiently.
+
+<br>
+
+Okay, maybe not THAT patiently. 😭
+</p>
+
+<div class="heart">🌙 💙 🌌</div>
+
+<p class="big">
+PB × JJ<br>
+more sunsets • more food • more hugs • more us
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+function show(id){
+document.getElementById(id).style.display="block";
+}
+</script>
 
 </body>
 </html>
