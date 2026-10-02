@@ -1,583 +1,358 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-
-    <title>Little Things I Want With You 🌷</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-
-    <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-
-            margin: 0;
-
-            min-height: 100vh;
-
-            background:
-                radial-gradient(circle at 10% 10%, #fff8fa, transparent 30%),
-                radial-gradient(circle at 90% 90%, #ffe2eb, transparent 35%),
-                linear-gradient(135deg, #fff1f5, #ffe6ed, #fff7f8);
-
-            font-family: 'Poppins', sans-serif;
-
-            color: #674550;
-
-            overflow-x: hidden;
-
-        }
-
-
-        .container {
-
-            max-width: 900px;
-
-            width: 90%;
-
-            margin: auto;
-
-            padding: 70px 0;
-
-            text-align: center;
-
-        }
-
-
-        /* Heading */
-
-        .top-emoji {
-
-            font-size: 45px;
-
-            animation: float 3s ease-in-out infinite;
-
-        }
-
-
-        h1 {
-
-            font-family: 'Caveat', cursive;
-
-            font-size: 65px;
-
-            color: #b65c78;
-
-            margin: 10px 0;
-
-        }
-
-
-        .intro {
-
-            max-width: 600px;
-
-            margin: auto;
-
-            line-height: 2;
-
-            font-size: 17px;
-
-        }
-
-
-        /* Scrapbook */
-
-        .scrapbook {
-
-            display: grid;
-
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-
-            gap: 30px;
-
-            margin-top: 60px;
-
-        }
-
-
-        .note {
-
-            min-height: 230px;
-
-            padding: 30px;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: center;
-
-            align-items: center;
-
-            background: #fffdfd;
-
-            border-radius: 8px;
-
-            box-shadow:
-                0 12px 25px rgba(150,80,100,0.13);
-
-            position: relative;
-
-            opacity: 0;
-
-            animation: pop 1s forwards;
-
-        }
-
-
-        .note:nth-child(1) {
-            transform: rotate(-2deg);
-        }
-
-        .note:nth-child(2) {
-            transform: rotate(2deg);
-            animation-delay: 0.4s;
-        }
-
-        .note:nth-child(3) {
-            transform: rotate(-1deg);
-            animation-delay: 0.8s;
-        }
-
-        .note:nth-child(4) {
-            transform: rotate(2deg);
-            animation-delay: 1.2s;
-        }
-
-        .note:nth-child(5) {
-            transform: rotate(-2deg);
-            animation-delay: 1.6s;
-        }
-
-        .note:nth-child(6) {
-            transform: rotate(1deg);
-            animation-delay: 2s;
-        }
-
-
-        /* Tape */
-
-        .tape {
-
-            position: absolute;
-
-            top: -12px;
-
-            width: 75px;
-
-            height: 25px;
-
-            background: rgba(244, 187, 201, 0.65);
-
-            transform: rotate(-3deg);
-
-        }
-
-
-        .note-emoji {
-
-            font-size: 38px;
-
-            margin-bottom: 10px;
-
-        }
-
-
-        .note h2 {
-
-            font-family: 'Caveat', cursive;
-
-            font-size: 35px;
-
-            color: #b45b76;
-
-            margin: 5px;
-
-        }
-
-
-        .note p {
-
-            line-height: 1.8;
-
-            font-size: 15px;
-
-        }
-
-
-        /* Final message */
-
-        .ending {
-
-            margin-top: 70px;
-
-            font-family: 'Caveat', cursive;
-
-            font-size: 38px;
-
-            color: #ae5873;
-
-        }
-
-
-        button {
-
-            margin-top: 30px;
-
-            padding: 15px 32px;
-
-            border: none;
-
-            border-radius: 30px;
-
-            background: #d47d96;
-
-            color: white;
-
-            font-size: 16px;
-
-            cursor: pointer;
-
-            transition: 0.3s;
-
-        }
-
-
-        button:hover {
-
-            transform: scale(1.08);
-
-        }
-
-
-        /* Floating flowers */
-
-        .flower {
-
-            position: fixed;
-
-            bottom: -40px;
-
-            font-size: 25px;
-
-            pointer-events: none;
-
-            animation: floatFlower 8s linear infinite;
-
-            opacity: 0;
-
-        }
-
-
-        @keyframes pop {
-
-            from {
-
-                opacity: 0;
-
-                transform: scale(0.7) translateY(30px);
-
-            }
-
-            to {
-
-                opacity: 1;
-
-            }
-
-        }
-
-
-        @keyframes float {
-
-            0%,100% {
-
-                transform: translateY(0);
-
-            }
-
-            50% {
-
-                transform: translateY(-8px);
-
-            }
-
-        }
-
-
-        @keyframes floatFlower {
-
-            0% {
-
-                transform: translateY(0) rotate(0deg);
-
-                opacity: 0;
-
-            }
-
-            15% {
-
-                opacity: 0.8;
-
-            }
-
-            100% {
-
-                transform: translateY(-110vh) rotate(180deg);
-
-                opacity: 0;
-
-            }
-
-        }
-
-
-        @media(max-width:600px) {
-
-            h1 {
-
-                font-size: 52px;
-
-            }
-
-        }
-
-    </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>PB × JJ — Still Here 🌌</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Serif+Display:ital@0;1&family=Kalam:wght@400;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box}
+
+body{
+margin:0;
+min-height:100vh;
+font-family:Quicksand,sans-serif;
+color:#edf7ff;
+
+background:
+radial-gradient(circle at 50% 20%,#477fc2,transparent 25%),
+radial-gradient(circle at 20% 80%,#354b91,transparent 30%),
+linear-gradient(150deg,#9bd8ff,#416fae,#273d79,#151d4a);
+
+background-attachment:fixed;
+}
+
+.wrapper{
+max-width:900px;
+margin:auto;
+padding:60px 20px;
+text-align:center;
+}
+
+h1{
+font-family:"DM Serif Display",serif;
+font-size:58px;
+font-weight:400;
+margin:0;
+}
+
+.subtitle{
+font-family:Caveat,cursive;
+font-size:34px;
+color:#c9e9ff;
+}
+
+.card{
+margin:28px auto;
+padding:30px;
+max-width:750px;
+border-radius:28px;
+background:rgba(255,255,255,.10);
+border:1px solid rgba(255,255,255,.2);
+backdrop-filter:blur(12px);
+box-shadow:0 25px 60px rgba(0,0,0,.18);
+}
+
+button{
+padding:13px 24px;
+border:0;
+border-radius:30px;
+background:#b8e6ff;
+color:#183b61;
+font-family:Kalam,cursive;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+box-shadow:0 0 25px rgba(180,230,255,.6);
+}
+
+.hidden{
+display:none;
+animation:pop .7s ease;
+font-family:Kalam,cursive;
+font-size:22px;
+line-height:1.8;
+}
+
+@keyframes pop{
+0%{opacity:0;transform:translateY(25px) scale(.7)}
+70%{transform:translateY(-5px) scale(1.04)}
+100%{opacity:1;transform:scale(1)}
+}
+
+img{
+width:250px;
+max-height:190px;
+object-fit:contain;
+margin:15px;
+filter:drop-shadow(0 15px 15px rgba(0,0,0,.3));
+}
+
+.tease{
+color:#d6f1ff;
+font-family:Caveat,cursive;
+font-size:34px;
+}
+
+.next{
+display:inline-block;
+margin-top:30px;
+padding:14px 30px;
+border-radius:30px;
+background:#e1f5ff;
+color:#1c4670;
+text-decoration:none;
+font-family:Kalam,cursive;
+font-size:19px;
+}
+</style>
 </head>
-
 
 <body>
 
+<div class="wrapper">
 
-    <!-- Floating flowers -->
+<h1>Still here. 🌌</h1>
 
-    <div class="flower" style="left:5%; animation-delay:0s;">🌸</div>
+<div class="subtitle">
+After everything... it's still PB & JJ.
+</div>
 
-    <div class="flower" style="left:20%; animation-delay:2s;">🌷</div>
 
-    <div class="flower" style="left:40%; animation-delay:4s;">🌼</div>
+<div class="card">
 
-    <div class="flower" style="left:60%; animation-delay:1s;">🌸</div>
+<p>
+We've had fights.
+Real ones.
+The kind where breakup has been mentioned,
+feelings get hurt,
+and everything feels heavier than it should.
+</p>
 
-    <div class="flower" style="left:80%; animation-delay:3s;">🌷</div>
+<button onclick="show('fight')">
+Click if you're brave, Duggi 👀
+</button>
 
-    <div class="flower" style="left:92%; animation-delay:5s;">🌼</div>
+<div id="fight" class="hidden">
 
+But somehow,
+after all those storms,
+we still stay.
 
-    <div class="container">
+<br><br>
 
+Maybe that's the string again.
 
-        <div class="top-emoji">
-            🌷
-        </div>
+<br>
 
+<b>The annoying little invisible string
+that apparently refuses to let us go. 😂💙</b>
 
-        <h1>
-            Little things I want with you
-        </h1>
+</div>
 
+</div>
 
-        <p class="intro">
 
-            Not huge promises.
+<div class="card">
 
-            <br>
+<div class="tease">And then there's you...</div>
 
-            Just little moments that I'd love
-            to collect with you.
+<button onclick="show('patient')">
+Click here, Mr. Patient 😌
+</button>
 
-        </p>
+<div id="patient" class="hidden">
 
+You have been ridiculously patient with me.
 
-        <div class="scrapbook">
+<br><br>
 
+Because I am...
+let's be honest...
 
-            <!-- NOTE 1 -->
+<br>
 
-            <div class="note">
+<b>VERY MOODY. 😭</b>
 
-                <div class="tape"></div>
+<br><br>
 
-                <div class="note-emoji">
-                    🌅
-                </div>
+And somehow you still deal with my moods,
+my overthinking,
+my emotional moments,
+and all the random things
+that come with being me.
 
-                <h2>
-                    Sunsets
-                </h2>
+<br><br>
 
-                <p>
+You have saved me from more tough spots
+than I probably even tell you.
 
-                    I want to see stupidly beautiful sunsets
-                    with you and probably argue about
-                    who gets the better picture.
+<br><br>
 
-                </p>
+You're not just my boyfriend.
 
-            </div>
+<br>
 
+<b>You're one of the people
+I feel emotionally safe running to.</b> 💙
 
-            <!-- NOTE 2 -->
+</div>
 
-            <div class="note">
+</div>
 
-                <div class="tape"></div>
 
-                <div class="note-emoji">
-                    ☕
-                </div>
+<div class="card">
 
-                <h2>
-                    Slow mornings
-                </h2>
+<img src="https://openclipart.org/image/2000px/321935"
+alt="Cartoon couple having dinner">
 
-                <p>
+<br>
 
-                    One day I want mornings where
-                    neither of us has somewhere urgent
-                    to be.
+<button onclick="show('food')">
+Important question 🍜
+</button>
 
-                    Just sitting together and doing nothing.
+<div id="food" class="hidden">
 
-                </p>
+Why do we love food this much? 😂
 
-            </div>
+<br><br>
 
+Actually, don't answer.
 
-            <!-- NOTE 3 -->
+<br>
 
-            <div class="note">
+I already know.
 
-                <div class="tape"></div>
+<br><br>
 
-                <div class="note-emoji">
-                    😂
-                </div>
+<b>Because food + PB + JJ =
+a perfectly acceptable personality.</b> 😭
 
-                <h2>
-                    Stupid laughter
-                </h2>
+<br><br>
 
-                <p>
+I want more eating dates,
+more random food plans,
+more "what should we eat?"
+and more stealing food from each other's plates.
 
-                    The kind of laughter where
-                    we don't even remember what
-                    we were laughing about.
+</div>
 
-                </p>
+</div>
 
-            </div>
 
+<div class="card">
 
-            <!-- NOTE 4 -->
+<img src="https://openclipart.org/image/2000px/241415"
+alt="Cartoon kissing couple">
 
-            <div class="note">
+<br>
 
-                <div class="tape"></div>
+<button onclick="show('flirt')">
+Do NOT click this. 😏
+</button>
 
-                <div class="note-emoji">
-                    🌧️
-                </div>
+<div id="flirt" class="hidden">
 
-                <h2>
-                    Rainy days
-                </h2>
+You clicked it.
 
-                <p>
+<br><br>
 
-                    Staying somewhere cozy,
-                    listening to the rain,
-                    and talking about absolutely nothing.
+I knew you would. 😂
 
-                </p>
+<br><br>
 
-            </div>
+And since you're already here...
 
+<br>
 
-            <!-- NOTE 5 -->
+<b>
+I miss being close to you, babe.
+<br>
+The hugs.
+The holding hands.
+The little kisses.
+<br>
+And those moments when we're close enough
+that words aren't really necessary. 💙
+</b>
 
-            <div class="note">
+<br><br>
 
-                <div class="tape"></div>
+So yes, Duggi...
 
-                <div class="note-emoji">
-                    🚶‍♀️
-                </div>
+<br>
 
-                <h2>
-                    Random walks
-                </h2>
+<b>come here. 😌</b>
 
-                <p>
+</div>
 
-                    Walking somewhere without really
-                    having a plan and somehow making
-                    an entire memory out of it.
+</div>
 
-                </p>
 
-            </div>
+<div class="card">
 
+<div class="tease">And then you moved near me. 🏔️</div>
 
-            <!-- NOTE 6 -->
+<button onclick="show('himachal')">
+Click the Himachal chapter
+</button>
 
-            <div class="note">
+<div id="himachal" class="hidden">
 
-                <div class="tape"></div>
+You actually moved near me in Himachal.
 
-                <div class="note-emoji">
-                    💌
-                </div>
+<br><br>
 
-                <h2>
-                    More us
-                </h2>
+And somehow,
+even after fights,
+distance,
+stress,
+studies,
+moods,
+and everything else...
 
-                <p>
+<br>
 
-                    More conversations.
-                    More learning each other.
-                    More ordinary days that
-                    quietly become special.
+<b>we are still here.</b>
 
-                </p>
+<br><br>
 
-            </div>
+Maybe that's what makes our story ours.
 
+<br>
 
-        </div>
+Not that we never fight.
 
+<br>
 
-        <div class="ending">
+But that we keep finding reasons to stay.
 
-            Maybe that's what I really want...
+</div>
 
-            <br>
+</div>
 
-            A lot of ordinary days with you. 💗
 
-        </div>
+<a class="next" href="final.html">
+One last thing, babe... 🌌 →
+</a>
 
+</div>
 
-        <button onclick="location.href='final.html'">
-
-            One last page... 💌
-
-        </button>
-
-
-    </div>
-
+<script>
+function show(id){
+document.getElementById(id).style.display="block";
+}
+</script>
 
 </body>
-
 </html>
