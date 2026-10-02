@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For You ❤️</title>
+</head>
+
+<body>
+
+    <h1>This little place is just for you ❤️</h1>
+
+    <p>There is something I wanted to tell you...</p>
+
+    <p>But first, you need the secret word.</p>
+
+    <input type="password" id="password" placeholder="Enter the secret word">
+
+    <button onclick="checkPassword()">Open ❤️</button>
+
+    <p id="message"></p>
+
+    <script>
+        function checkPassword() {
+            let password = document.getElementById("password").value;
+
+            if (password === "Jibhi") {
+                document.getElementById("message").innerHTML =
+                    "You found your way in ❤️";
+            } else {
+                document.getElementById("message").innerHTML =
+                    "Hmm... that's not it. Try again ❤️";
+            }
+        }
+    </script>
+
+</body>
+</html>
