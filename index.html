@@ -1,35 +1,439 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>For You ❤️</title>
+
+    <title>A Little Secret 💙</title>
+
+    <!-- Romantic handwritten fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            background:
+                radial-gradient(circle at 20% 20%, #dceeff, transparent 30%),
+                radial-gradient(circle at 80% 80%, #e8ddff, transparent 30%),
+                linear-gradient(135deg, #edf7ff, #dcecff, #eee8ff);
+
+            font-family: 'Poppins', sans-serif;
+            color: #304a68;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+        }
+
+
+        /* Main card */
+
+        .card {
+
+            width: 90%;
+            max-width: 520px;
+
+            padding: 50px 35px;
+
+            text-align: center;
+
+            background: rgba(255, 255, 255, 0.65);
+
+            border: 2px solid rgba(255,255,255,0.8);
+
+            border-radius: 35px;
+
+            box-shadow:
+                0 20px 50px rgba(60, 100, 150, 0.18);
+
+            backdrop-filter: blur(10px);
+
+            animation: appear 1.5s ease;
+
+        }
+
+
+        /* Handwritten heading */
+
+        h1 {
+
+            font-family: 'Caveat', cursive;
+
+            font-size: 62px;
+
+            color: #4778b5;
+
+            margin: 5px 0 15px;
+
+            animation: floatTitle 3s ease-in-out infinite;
+
+        }
+
+
+        .subtitle {
+
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            color: #536b85;
+
+        }
+
+
+        /* Doodle line */
+
+        .doodle {
+
+            font-size: 25px;
+
+            letter-spacing: 10px;
+
+            margin: 15px 0;
+
+            color: #6495c8;
+
+        }
+
+
+        /* Password box */
+
+        input {
+
+            width: 80%;
+
+            padding: 15px 20px;
+
+            margin-top: 20px;
+
+            border-radius: 30px;
+
+            border: 2px solid #b9d5f2;
+
+            outline: none;
+
+            text-align: center;
+
+            font-size: 15px;
+
+            font-family: 'Poppins', sans-serif;
+
+            background: rgba(255,255,255,0.8);
+
+            color: #345777;
+
+            transition: 0.3s;
+
+        }
+
+
+        input:focus {
+
+            border-color: #6d9ed1;
+
+            box-shadow: 0 0 15px rgba(80,130,190,0.2);
+
+        }
+
+
+        /* Button */
+
+        button {
+
+            display: block;
+
+            margin: 18px auto 0;
+
+            padding: 13px 30px;
+
+            border: none;
+
+            border-radius: 30px;
+
+            background: linear-gradient(135deg, #6699cc, #7d78bd);
+
+            color: white;
+
+            font-size: 16px;
+
+            font-family: 'Poppins', sans-serif;
+
+            cursor: pointer;
+
+            box-shadow: 0 8px 20px rgba(70,100,160,0.25);
+
+            transition: 0.3s;
+
+        }
+
+
+        button:hover {
+
+            transform: scale(1.08);
+
+            box-shadow: 0 12px 25px rgba(70,100,160,0.3);
+
+        }
+
+
+        #message {
+
+            min-height: 25px;
+
+            margin-top: 15px;
+
+            font-size: 14px;
+
+        }
+
+
+        /* Floating hearts */
+
+        .heart {
+
+            position: fixed;
+
+            bottom: -30px;
+
+            font-size: 22px;
+
+            pointer-events: none;
+
+            animation: floatHeart 7s linear infinite;
+
+            opacity: 0;
+
+        }
+
+
+        /* Little doodles */
+
+        .doodle-star {
+
+            position: fixed;
+
+            font-size: 22px;
+
+            color: #739fd0;
+
+            opacity: 0.6;
+
+            animation: twinkle 2s infinite alternate;
+
+        }
+
+
+        /* Animations */
+
+        @keyframes appear {
+
+            from {
+
+                opacity: 0;
+
+                transform: scale(0.8) translateY(30px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: scale(1) translateY(0);
+
+            }
+
+        }
+
+
+        @keyframes floatTitle {
+
+            0%, 100% {
+
+                transform: translateY(0);
+
+            }
+
+            50% {
+
+                transform: translateY(-6px);
+
+            }
+
+        }
+
+
+        @keyframes floatHeart {
+
+            0% {
+
+                transform: translateY(0) rotate(0deg);
+
+                opacity: 0;
+
+            }
+
+            15% {
+
+                opacity: 0.7;
+
+            }
+
+            100% {
+
+                transform: translateY(-110vh) rotate(360deg);
+
+                opacity: 0;
+
+            }
+
+        }
+
+
+        @keyframes twinkle {
+
+            from {
+
+                opacity: 0.25;
+
+                transform: scale(0.8);
+
+            }
+
+            to {
+
+                opacity: 0.9;
+
+                transform: scale(1.2);
+
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <h1>This little place is just for you ❤️</h1>
 
-    <p>There is something I wanted to tell you...</p>
+    <!-- Little blue doodles -->
 
-    <p>But first, you need the secret word.</p>
+    <div class="doodle-star" style="top:10%; left:12%;">✦</div>
 
-    <input type="password" id="password" placeholder="Enter the secret word">
+    <div class="doodle-star" style="top:20%; right:15%;">✧</div>
 
-    <button onclick="checkPassword()">Open ❤️</button>
+    <div class="doodle-star" style="bottom:15%; left:18%;">✦</div>
 
-    <p id="message"></p>
+    <div class="doodle-star" style="bottom:22%; right:12%;">✧</div>
+
+
+    <!-- Floating hearts -->
+
+    <div class="heart" style="left:8%; animation-delay:0s;">♡</div>
+
+    <div class="heart" style="left:25%; animation-delay:2s;">💙</div>
+
+    <div class="heart" style="left:48%; animation-delay:4s;">♡</div>
+
+    <div class="heart" style="left:70%; animation-delay:1s;">💙</div>
+
+    <div class="heart" style="left:90%; animation-delay:3s;">♡</div>
+
+
+    <!-- Main content -->
+
+    <div class="card">
+
+        <div class="doodle">
+            ˚₊‧♡‧₊˚ ✦ ˚₊‧♡‧₊˚
+        </div>
+
+
+        <h1>Hey you... 💙</h1>
+
+
+        <p class="subtitle">
+
+            I made a tiny little corner of the internet
+            just for you.
+
+            <br>
+
+            But there's one tiny problem...
+
+            <br><br>
+
+            <strong>
+                You need the secret word to enter. ♡
+            </strong>
+
+        </p>
+
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Our little secret..."
+        >
+
+
+        <button onclick="checkPassword()">
+
+            Open this for me 💙
+
+        </button>
+
+
+        <p id="message"></p>
+
+
+        <div class="doodle">
+            ✧ ♡ ✧
+        </div>
+
+    </div>
+
 
     <script>
-        function checkPassword() {
-            let password = document.getElementById("password").value;
 
-           if (password === "moon") {
-    window.location.href = "welcome.html";
-} else {
-    document.getElementById("message").innerHTML =
-        "Hmm... that's not it. Try again ❤️";
-} 
+        function checkPassword() {
+
+            let password =
+                document.getElementById("password").value;
+
+
+            if (password === "moon") {
+
+                window.location.href =
+                    "welcome.html";
+
+            }
+
+            else {
+
+                document.getElementById("message").innerHTML =
+                    "Hmm... that's not our secret word ♡";
+
+            }
+
         }
+
     </script>
 
+
 </body>
+
 </html>
