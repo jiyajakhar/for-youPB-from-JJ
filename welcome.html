@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PB × JJ — Before Us ☁️</title>
+<title>PB ♡ JJ | Before Us</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Serif+Display:ital@0;1&family=Kalam:wght@400;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Serif+Display:ital@0;1&family=Kalam:wght@400;700&family=Parisienne&display=swap" rel="stylesheet">
 
 <style>
 *{box-sizing:border-box}
@@ -17,39 +17,38 @@ body{
 margin:0;
 min-height:100vh;
 overflow-x:hidden;
-font-family:Montserrat,sans-serif;
-color:#173b66;
+font-family:Kalam,cursive;
+color:#693f4b;
+
 background:
-radial-gradient(circle at 15% 15%,#ffffff 0,transparent 20%),
-radial-gradient(circle at 85% 25%,#dff6ff 0,transparent 25%),
-linear-gradient(145deg,#d9f3ff,#8ed0f5,#b6d9ff,#e3d9ff);
+radial-gradient(circle at 15% 15%,#fff8e8,transparent 25%),
+radial-gradient(circle at 85% 20%,#ffd1b8,transparent 30%),
+radial-gradient(circle at 50% 90%,#f5b5a5,transparent 35%),
+linear-gradient(145deg,#fff0d5,#ffc7a9,#f5a58f,#d993a5);
 }
 
 .cloud{
 position:fixed;
-font-size:70px;
-opacity:.45;
-animation:cloud 18s linear infinite;
-pointer-events:none;
+font-size:65px;
+opacity:.35;
+animation:float 15s linear infinite;
 }
-.c1{top:8%;left:-100px}
-.c2{top:32%;right:-100px;animation-delay:5s}
-.c3{top:70%;left:-120px;animation-delay:9s}
 
-@keyframes cloud{
-from{transform:translateX(0)}
+.c1{top:10%;left:-100px}
+.c2{top:35%;left:-140px;animation-delay:6s}
+
+@keyframes float{
 to{transform:translateX(120vw)}
 }
 
 .wrapper{
-max-width:850px;
+max-width:800px;
 margin:auto;
-padding:70px 20px;
+padding:65px 20px;
 text-align:center;
 }
 
-.small{
-font-family:Kalam,cursive;
+.kicker{
 font-size:20px;
 letter-spacing:2px;
 }
@@ -59,179 +58,187 @@ font-family:"DM Serif Display",serif;
 font-size:65px;
 font-weight:400;
 margin:5px 0;
-color:#164c7e;
+color:#8a4351;
 }
 
 .names{
-font-family:Caveat,cursive;
-font-size:38px;
-color:#286b9e;
+font-family:Parisienne,cursive;
+font-size:42px;
+color:#9c5964;
 }
 
 .sun{
-font-size:60px;
+font-size:68px;
 margin:20px;
-animation:bounce 2.5s infinite;
+animation:sun 2.5s ease-in-out infinite;
 }
 
-@keyframes bounce{
-50%{transform:translateY(-10px)}
+@keyframes sun{
+50%{transform:translateY(-8px) scale(1.04)}
 }
 
 .card{
-background:rgba(255,255,255,.63);
-backdrop-filter:blur(12px);
+background:rgba(255,248,239,.72);
 border:1px solid rgba(255,255,255,.8);
-border-radius:30px;
-padding:38px 30px;
-margin-top:25px;
-box-shadow:0 25px 60px rgba(39,91,135,.18);
+border-radius:32px;
+padding:35px 25px;
+box-shadow:0 25px 55px rgba(116,57,65,.18);
 }
 
-.click{
-display:inline-block;
-margin:15px;
+.hint{
+font-family:Caveat,cursive;
+font-size:27px;
+color:#985161;
+margin-bottom:22px;
+}
+
+.pop{
+display:block;
+margin:15px auto;
 padding:13px 25px;
+border:0;
 border-radius:30px;
-background:#347db4;
+background:#c97878;
 color:white;
-cursor:pointer;
-box-shadow:0 8px 20px rgba(28,86,130,.25);
-transition:.3s;
 font-family:Kalam,cursive;
 font-size:19px;
+cursor:pointer;
+box-shadow:0 8px 18px rgba(130,65,75,.18);
+animation:buttonPop 2s infinite;
 }
 
-.click:hover{
-transform:scale(1.08) rotate(-2deg);
+.pop:hover{
+transform:scale(1.08);
+}
+
+@keyframes buttonPop{
+0%,100%{transform:scale(1)}
+50%{transform:scale(1.04)}
 }
 
 .message{
 display:none;
-animation:pop .7s ease;
-font-family:Kalam,cursive;
-font-size:23px;
-line-height:1.8;
+font-size:22px;
+line-height:1.6;
+padding:18px;
+animation:appear .6s ease;
 }
 
-@keyframes pop{
-0%{opacity:0;transform:scale(.65) translateY(20px)}
-70%{transform:scale(1.04)}
-100%{opacity:1;transform:scale(1)}
+@keyframes appear{
+from{opacity:0;transform:translateY(15px) scale(.85)}
+to{opacity:1;transform:none}
 }
 
-.tease{
-font-family:Caveat,cursive;
-font-size:30px;
-color:#7252a5;
-margin-top:25px;
+.sticker{
+font-size:38px;
+margin:8px;
 }
 
 .next{
 display:inline-block;
-margin-top:30px;
+margin-top:28px;
 padding:14px 28px;
 border-radius:30px;
-background:#245d91;
+background:#874653;
 color:white;
 text-decoration:none;
-font-family:Kalam,cursive;
-font-size:18px;
+font-size:19px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="cloud c1">☁️ ☁️</div>
-<div class="cloud c2">☁️</div>
-<div class="cloud c3">☁️ ☁️</div>
+<div class="cloud c1">☁️</div>
+<div class="cloud c2">☁️ ☁️</div>
 
 <div class="wrapper">
 
-<div class="small">the story of</div>
+<div class="kicker">once upon a time...</div>
 
-<h1>PB × JJ</h1>
+<h1>PB ♡ JJ</h1>
 
-<div class="names">before we were actually "us"...</div>
+<div class="names">before we were us</div>
 
-<div class="sun">🌤️</div>
+<div class="sun">🌅</div>
 
 <div class="card">
 
-<p>
-There was a time when we were just two children
-who happened to keep noticing each other.
-</p>
+<div class="sticker">🌷 🪽 💌</div>
 
-<div class="click" onclick="show('one')">
-☁️ Click me, Duggi...
+<div class="hint">
+Duggi, let's go back a little...
 </div>
 
-<div id="one" class="message">
-2016... 2017...<br><br>
+<button class="pop" onclick="openMsg('m1')">
+☁️ 2016–17
+</button>
 
-Looking back now, it's actually funny.
-We were so young that we probably didn't even understand
-what was happening. 😂<br><br>
-
-Just seeing each other...
-not knowing that years later we'd be sitting here
-calling each other <b>babe</b>.
+<div id="m1" class="message">
+We were just kids, babe. 🤍
+<br>
+Just seeing each other.
+<br>
+Just noticing each other.
 </div>
 
-<div class="click" onclick="show('two')">
-👀 Okay... one more
-</div>
+<button class="pop" onclick="openMsg('m2')">
+🌸 One little secret
+</button>
 
-<div id="two" class="message">
-And Duggi, I know there were times when
-you probably thought I was too nonchalant. 😭<br><br>
-
-Especially when you wanted to meet me
-and I acted like,
-"haan okay... dekhenge." 😂<br><br>
-
-I'm sorry for the times you felt bad because of that.
-I may not have shown it properly then,
-but there was always something about you
-that felt different from all the other boys.
-</div>
-
-<div class="click" onclick="show('three')">
-🧵 What's that "something"?
-</div>
-
-<div id="three" class="message">
-I don't really know how to explain it.<br><br>
-
-Maybe it was just this tiny invisible string.
-Something that kept connecting us.
+<div id="m2" class="message">
+You always felt a little different to me.
 <br><br>
-
-Even when we weren't close.
-Even when we misunderstood each other.
-Even when we fought badly.
-Even when "maybe we should end this" came up...
-<br><br>
-
-<b>Somehow, we never actually did.</b> 💙
+I couldn't explain it then.
+<br>
+I just felt it.
 </div>
 
-<div class="tease">
-And honestly... you should have known<br>
-I wasn't getting rid of you that easily. 😌
+<button class="pop" onclick="openMsg('m3')">
+💌 And you...
+</button>
+
+<div id="m3" class="message">
+You wanted to meet me.
+<br>
+And I was way too nonchalant sometimes. 🥺
+<br><br>
+I'm sorry, Duggi.
+</div>
+
+<button class="pop" onclick="openMsg('m4')">
+🧵 The strange part
+</button>
+
+<div id="m4" class="message">
+Even when we weren't close...
+<br>
+something kept connecting us.
+<br><br>
+A tiny invisible string.
+</div>
+
+<button class="pop" onclick="openMsg('m5')">
+🌷 Maybe it was always us
+</button>
+
+<div id="m5" class="message">
+We didn't know it yet.
+<br><br>
+But somehow...
+<br>
+we kept finding our way back.
 </div>
 
 <a class="next" href="message.html">
-Continue our little story ☁️ →
+Our next chapter, babe → 💗
 </a>
 
 </div>
 </div>
 
 <script>
-function show(id){
+function openMsg(id){
 document.getElementById(id).style.display="block";
 }
 </script>
