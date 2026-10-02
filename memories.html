@@ -3,127 +3,349 @@
 
 <head>
 
-    <title>For You ❤️</title>
+    <title>Little Things I Want With You 🌷</title>
 
-    <!-- Beautiful romantic fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
     <style>
 
-        body {
-            margin: 0;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #fff0f5, #ffe4ec, #fce1ef);
-            font-family: 'Poppins', sans-serif;
-            text-align: center;
-            color: #5c3a46;
-            overflow-x: hidden;
+        * {
+            box-sizing: border-box;
         }
+
+        body {
+
+            margin: 0;
+
+            min-height: 100vh;
+
+            background:
+                radial-gradient(circle at 10% 10%, #fff8fa, transparent 30%),
+                radial-gradient(circle at 90% 90%, #ffe2eb, transparent 35%),
+                linear-gradient(135deg, #fff1f5, #ffe6ed, #fff7f8);
+
+            font-family: 'Poppins', sans-serif;
+
+            color: #674550;
+
+            overflow-x: hidden;
+
+        }
+
 
         .container {
-            max-width: 750px;
+
+            max-width: 900px;
+
+            width: 90%;
+
             margin: auto;
-            padding: 70px 25px;
+
+            padding: 70px 0;
+
+            text-align: center;
+
         }
+
+
+        /* Heading */
+
+        .top-emoji {
+
+            font-size: 45px;
+
+            animation: float 3s ease-in-out infinite;
+
+        }
+
 
         h1 {
+
             font-family: 'Caveat', cursive;
-            font-size: 60px;
-            margin-bottom: 10px;
-            animation: fadeIn 2s ease;
+
+            font-size: 65px;
+
+            color: #b65c78;
+
+            margin: 10px 0;
+
         }
 
-        h2 {
-            font-family: 'Caveat', cursive;
-            font-size: 38px;
-        }
 
-        p {
+        .intro {
+
+            max-width: 600px;
+
+            margin: auto;
+
+            line-height: 2;
+
             font-size: 17px;
-            line-height: 1.9;
+
         }
 
-        .card {
-            background: rgba(255, 255, 255, 0.75);
-            padding: 30px;
-            margin: 25px 0;
-            border-radius: 25px;
-            box-shadow: 0 10px 30px rgba(120, 70, 90, 0.15);
-            animation: popUp 1s ease;
+
+        /* Scrapbook */
+
+        .scrapbook {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+            gap: 30px;
+
+            margin-top: 60px;
+
         }
+
+
+        .note {
+
+            min-height: 230px;
+
+            padding: 30px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background: #fffdfd;
+
+            border-radius: 8px;
+
+            box-shadow:
+                0 12px 25px rgba(150,80,100,0.13);
+
+            position: relative;
+
+            opacity: 0;
+
+            animation: pop 1s forwards;
+
+        }
+
+
+        .note:nth-child(1) {
+            transform: rotate(-2deg);
+        }
+
+        .note:nth-child(2) {
+            transform: rotate(2deg);
+            animation-delay: 0.4s;
+        }
+
+        .note:nth-child(3) {
+            transform: rotate(-1deg);
+            animation-delay: 0.8s;
+        }
+
+        .note:nth-child(4) {
+            transform: rotate(2deg);
+            animation-delay: 1.2s;
+        }
+
+        .note:nth-child(5) {
+            transform: rotate(-2deg);
+            animation-delay: 1.6s;
+        }
+
+        .note:nth-child(6) {
+            transform: rotate(1deg);
+            animation-delay: 2s;
+        }
+
+
+        /* Tape */
+
+        .tape {
+
+            position: absolute;
+
+            top: -12px;
+
+            width: 75px;
+
+            height: 25px;
+
+            background: rgba(244, 187, 201, 0.65);
+
+            transform: rotate(-3deg);
+
+        }
+
+
+        .note-emoji {
+
+            font-size: 38px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .note h2 {
+
+            font-family: 'Caveat', cursive;
+
+            font-size: 35px;
+
+            color: #b45b76;
+
+            margin: 5px;
+
+        }
+
+
+        .note p {
+
+            line-height: 1.8;
+
+            font-size: 15px;
+
+        }
+
+
+        /* Final message */
+
+        .ending {
+
+            margin-top: 70px;
+
+            font-family: 'Caveat', cursive;
+
+            font-size: 38px;
+
+            color: #ae5873;
+
+        }
+
 
         button {
+
+            margin-top: 30px;
+
+            padding: 15px 32px;
+
             border: none;
-            padding: 14px 28px;
+
             border-radius: 30px;
-            background: #d86b91;
+
+            background: #d47d96;
+
             color: white;
+
             font-size: 16px;
+
             cursor: pointer;
-            margin-top: 20px;
+
             transition: 0.3s;
+
         }
+
 
         button:hover {
+
             transform: scale(1.08);
+
         }
 
-        /* Floating hearts */
 
-        .heart {
+        /* Floating flowers */
+
+        .flower {
+
             position: fixed;
-            bottom: -20px;
-            font-size: 22px;
-            animation: floatUp 6s linear infinite;
-            opacity: 0.7;
+
+            bottom: -40px;
+
+            font-size: 25px;
+
             pointer-events: none;
+
+            animation: floatFlower 8s linear infinite;
+
+            opacity: 0;
+
         }
 
-        @keyframes floatUp {
 
-            0% {
-                transform: translateY(0) rotate(0deg);
+        @keyframes pop {
+
+            from {
+
                 opacity: 0;
+
+                transform: scale(0.7) translateY(30px);
+
             }
 
-            20% {
+            to {
+
                 opacity: 1;
+
+            }
+
+        }
+
+
+        @keyframes float {
+
+            0%,100% {
+
+                transform: translateY(0);
+
+            }
+
+            50% {
+
+                transform: translateY(-8px);
+
+            }
+
+        }
+
+
+        @keyframes floatFlower {
+
+            0% {
+
+                transform: translateY(0) rotate(0deg);
+
+                opacity: 0;
+
+            }
+
+            15% {
+
+                opacity: 0.8;
+
             }
 
             100% {
-                transform: translateY(-110vh) rotate(360deg);
+
+                transform: translateY(-110vh) rotate(180deg);
+
                 opacity: 0;
+
             }
 
         }
 
-        @keyframes fadeIn {
 
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
+        @media(max-width:600px) {
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            h1 {
 
-        }
+                font-size: 52px;
 
-        @keyframes popUp {
-
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1);
             }
 
         }
@@ -136,105 +358,222 @@
 <body>
 
 
-    <!-- Floating hearts -->
+    <!-- Floating flowers -->
 
-    <div class="heart" style="left:10%; animation-delay:0s;">❤️</div>
+    <div class="flower" style="left:5%; animation-delay:0s;">🌸</div>
 
-    <div class="heart" style="left:25%; animation-delay:2s;">💗</div>
+    <div class="flower" style="left:20%; animation-delay:2s;">🌷</div>
 
-    <div class="heart" style="left:45%; animation-delay:4s;">🤍</div>
+    <div class="flower" style="left:40%; animation-delay:4s;">🌼</div>
 
-    <div class="heart" style="left:65%; animation-delay:1s;">💕</div>
+    <div class="flower" style="left:60%; animation-delay:1s;">🌸</div>
 
-    <div class="heart" style="left:85%; animation-delay:3s;">❤️</div>
+    <div class="flower" style="left:80%; animation-delay:3s;">🌷</div>
+
+    <div class="flower" style="left:92%; animation-delay:5s;">🌼</div>
 
 
     <div class="container">
 
-        <h1>Some things I notice... ❤️</h1>
 
-        <p>
-            Maybe I don't always say these things,
-            but I notice them.
+        <div class="top-emoji">
+            🌷
+        </div>
+
+
+        <h1>
+            Little things I want with you
+        </h1>
+
+
+        <p class="intro">
+
+            Not huge promises.
+
+            <br>
+
+            Just little moments that I'd love
+            to collect with you.
+
         </p>
 
 
-        <div class="card">
+        <div class="scrapbook">
 
-            <h2>Your efforts</h2>
 
-            <p>
-                I know relationships aren't always easy.
-                We've had our difficult days,
-                our arguments, our misunderstandings
-                and moments when things felt heavy.
-            </p>
+            <!-- NOTE 1 -->
 
-            <p>
-                But behind all of that,
-                I have also seen you trying.
-            </p>
+            <div class="note">
+
+                <div class="tape"></div>
+
+                <div class="note-emoji">
+                    🌅
+                </div>
+
+                <h2>
+                    Sunsets
+                </h2>
+
+                <p>
+
+                    I want to see stupidly beautiful sunsets
+                    with you and probably argue about
+                    who gets the better picture.
+
+                </p>
+
+            </div>
+
+
+            <!-- NOTE 2 -->
+
+            <div class="note">
+
+                <div class="tape"></div>
+
+                <div class="note-emoji">
+                    ☕
+                </div>
+
+                <h2>
+                    Slow mornings
+                </h2>
+
+                <p>
+
+                    One day I want mornings where
+                    neither of us has somewhere urgent
+                    to be.
+
+                    Just sitting together and doing nothing.
+
+                </p>
+
+            </div>
+
+
+            <!-- NOTE 3 -->
+
+            <div class="note">
+
+                <div class="tape"></div>
+
+                <div class="note-emoji">
+                    😂
+                </div>
+
+                <h2>
+                    Stupid laughter
+                </h2>
+
+                <p>
+
+                    The kind of laughter where
+                    we don't even remember what
+                    we were laughing about.
+
+                </p>
+
+            </div>
+
+
+            <!-- NOTE 4 -->
+
+            <div class="note">
+
+                <div class="tape"></div>
+
+                <div class="note-emoji">
+                    🌧️
+                </div>
+
+                <h2>
+                    Rainy days
+                </h2>
+
+                <p>
+
+                    Staying somewhere cozy,
+                    listening to the rain,
+                    and talking about absolutely nothing.
+
+                </p>
+
+            </div>
+
+
+            <!-- NOTE 5 -->
+
+            <div class="note">
+
+                <div class="tape"></div>
+
+                <div class="note-emoji">
+                    🚶‍♀️
+                </div>
+
+                <h2>
+                    Random walks
+                </h2>
+
+                <p>
+
+                    Walking somewhere without really
+                    having a plan and somehow making
+                    an entire memory out of it.
+
+                </p>
+
+            </div>
+
+
+            <!-- NOTE 6 -->
+
+            <div class="note">
+
+                <div class="tape"></div>
+
+                <div class="note-emoji">
+                    💌
+                </div>
+
+                <h2>
+                    More us
+                </h2>
+
+                <p>
+
+                    More conversations.
+                    More learning each other.
+                    More ordinary days that
+                    quietly become special.
+
+                </p>
+
+            </div>
+
 
         </div>
 
 
-        <div class="card">
+        <div class="ending">
 
-            <h2>The difficult days</h2>
+            Maybe that's what I really want...
 
-            <p>
-                We've had days where we didn't understand
-                each other properly.
-            </p>
+            <br>
 
-            <p>
-                Days where a small thing became a big fight.
-                Days where both of us were tired,
-                hurt or frustrated.
-            </p>
-
-            <p>
-                But somehow, we kept coming back
-                and trying to understand each other again.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h2>And the little things...</h2>
-
-            <p>
-                The random conversations.
-                The silly moments.
-                The laughter.
-                The comfort.
-                The feeling of having someone
-                who knows you a little more than everyone else.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h2>So...</h2>
-
-            <p>
-                After everything,
-                I just wanted to make something
-                that reminds you that
-            </p>
-
-            <h1>your efforts are seen. ❤️</h1>
+            A lot of ordinary days with you. 💗
 
         </div>
 
 
         <button onclick="location.href='final.html'">
-            There's one last thing... 💌
+
+            One last page... 💌
+
         </button>
+
 
     </div>
 
